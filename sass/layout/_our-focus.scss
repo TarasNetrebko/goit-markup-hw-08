@@ -1,4 +1,8 @@
 .our-focus {
+  display: none;
+  @include desk {
+    display: block;
+  }
   .section & {
     padding-top: 0;
   }

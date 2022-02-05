@@ -1,21 +1,47 @@
 .paculiarities {
   padding-bottom: 0;
   &__list {
-    display: flex;
-    justify-content: center;
+    @include mob {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    @include tab {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: row;
+    }
+    @include desk {
+      justify-content: center;
+      flex-direction: row;
+    }
   }
   &__item {
-    width: 270px;
-    &:not(:last-child) {
-      margin-right: 30px;
+    @include mob {
+      width: 450px;
+      margin-bottom: 30px;
     }
+    @include tab {
+      width: 354px;
+      &:nth-child(2n - 1) {
+        margin-right: 30px;
+      }
+    }
+    @include desk {
+      width: 270px;
+      margin-bottom: 0;
+      &:nth-child(2) {
+        margin-right: 30px;
+      }
+    }
+
     &::before {
       content: '';
       display: block;
       height: 120px;
       margin-bottom: 30px;
       border-radius: 4px;
-
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;

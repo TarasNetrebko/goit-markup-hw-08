@@ -23,8 +23,12 @@
   transform: translate(-50%, -50%) scale(1);
   padding: 40px;
 
-  min-width: 528px;
-  min-height: 581px;
+  width: 450px;
+  height: 609px;
+  @include desk {
+    min-width: 528px;
+    min-height: 581px;
+  }
 
   background-color: var(--white-color);
   &__form {
