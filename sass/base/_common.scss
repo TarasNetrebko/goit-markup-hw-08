@@ -1,0 +1,52 @@
+body {
+  background-color: var(--white-color);
+  color: var(--main-text-color);
+  font-family: Roboto, sans-serif;
+  @include font(14px, null, null, 0.03em);
+}
+* {
+  transition-property: background-color, transform, box-shadow, color, opacity, visibility, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes slideup {
+  0% {
+    transform: translateY(137%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  cursor: pointer;
+}
+.upper-text {
+  text-align: start;
+  @include font(null, 700, 1.14, null);
+  text-transform: uppercase;
+}
+
+//LIST
+
+.list {
+  list-style: none;
+  &__title {
+    margin: 0 auto;
+    color: var(--secondary-text-color);
+  }
+}
+//LINK
+
+.link {
+  text-decoration: none;
+}
+
+//BUTTONS

@@ -1,0 +1,35 @@
+.paculiarities {
+  padding-bottom: 0;
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    width: 270px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &::before {
+      content: '';
+      display: block;
+      height: 120px;
+      margin-bottom: 30px;
+      border-radius: 4px;
+
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__text {
+    line-height: 1.7;
+  }
+}
+@each $icon in pacu-icon-1, pacu-icon-2, pacu-icon-3, pacu-icon-4 {
+  .#{$icon}::before {
+    background-image: url('../images/#{$icon}.svg');
+  }
+}

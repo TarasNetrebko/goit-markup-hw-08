@@ -1,0 +1,12 @@
+.section {
+  padding: 0;
+  margin: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  &__title {
+    text-align: center;
+
+    color: var(--secondary-text-color);
+    @include font(36px, 700, 1.17, null);
+  }
+}

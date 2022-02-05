@@ -1,0 +1,42 @@
+.contacts {
+  &-header {
+    color: var(--main-text-color);
+    @include font(14px, 500, 1.14, 0.02em);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+    &__icon1 {
+      transition-duration: 0ms;
+      width: 16px;
+      height: 12px;
+      margin-right: 10px;
+    }
+    &__icon2 {
+      transition-duration: 0ms;
+      width: 10px;
+      height: 16px;
+      margin-right: 10px;
+    }
+  }
+  &-footer {
+    color: var(--special-footer-text-color);
+    letter-spacing: 0.02em;
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+    &__fonts {
+      @include font(14px, null, 1.7, null);
+    }
+  }
+}
+.office {
+  &-adress {
+    color: var(--white-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+}

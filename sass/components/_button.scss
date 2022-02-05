@@ -1,0 +1,15 @@
+.btn {
+  &-primary {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    border: none;
+  }
+  &-secondary {
+    border: 1px solid transparent;
+
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-background-color);
+    cursor: pointer;
+  }
+}

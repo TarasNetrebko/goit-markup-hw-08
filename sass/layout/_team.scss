@@ -1,0 +1,41 @@
+.team {
+  background-color: var(--secondary-background-color);
+  &__list {
+    display: flex;
+    margin-top: 50px;
+  }
+  &__card {
+    box-shadow: var(--card-shadow);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &-discription {
+      display: flex;
+      flex-direction: column;
+      width: 270px;
+      padding-bottom: 30px;
+      padding-top: 30px;
+
+      border-radius: 0px 0px 4px 4px;
+      background-color: var(--white-color);
+    }
+  }
+  &member {
+    margin-bottom: 10px;
+
+    @include font(16px, 500, 1.19, null);
+  }
+  &__social-link {
+    background-color: var(--white-color);
+    color: var(--social-icons-main-color);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      color: var(--white-color);
+    }
+  }
+}
+.profession {
+  margin: 0 auto 16px auto;
+  @include font(16px, null, 1.19, null);
+}
