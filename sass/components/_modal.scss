@@ -4,7 +4,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 4;
 
   background-color: rgba(0, 0, 0, 0.2);
   &.is-hidden {
@@ -12,6 +12,9 @@
     pointer-events: none;
     visibility: none;
     & .modal {
+      transform: scale(0.2);
+    }
+    & .menu {
       transform: scale(0.2);
     }
   }
@@ -39,7 +42,10 @@
     text-align: center;
     margin-bottom: 12px;
 
-    @include font(20px, 700, 1.15, null);
+    @include font(20px, 700, 1.5, null);
+    @include desk {
+      @include font(20px, 700, 1.15, null);
+    }
     color: var(--secondary-text-color);
   }
   &__name-label {
@@ -84,6 +90,9 @@
     height: 120px;
 
     @include font(12px, null, 1.17, 0.01em);
+    @include desk {
+      @include font(14px, null, 1.14, 0.01em);
+    }
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
@@ -152,6 +161,10 @@
   align-items: center;
   &__stroke {
     display: flex;
+    @include font(12px, null, 1.17, 0.01em);
+    @include desk {
+      @include font(14px, null, 1.71, 0.01em);
+    }
   }
   &__link {
     color: var(--accent-color);

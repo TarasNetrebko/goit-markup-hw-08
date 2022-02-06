@@ -7,7 +7,27 @@
 
   background-color: var(--hero-background-color);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bg-image.jpg);
+    url(../images/bg-image-mob-1x.jpg);
+  @include x2 {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/bg-image-mob-2x.jpg);
+  }
+  @include tab {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/bg-image-tab-1x.jpg);
+    @include x2 {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/bg-image-tab-2x.jpg);
+    }
+  }
+  @include desk {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/bg-image.jpg);
+    @include x2 {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/bg-image-2x.jpg);
+    }
+  }
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -18,12 +38,15 @@
   }
   &__title {
     margin-bottom: 30px;
-    max-width: 696px;
-
+    max-width: 360px;
     color: var(--white-color);
-    @include font(44px, 900, 1.36, 0.06em);
+    @include font(26px, 900, 1.62, 0.06em);
     text-align: center;
     text-transform: uppercase;
+    @include desk {
+      max-width: 696px;
+      @include font(44px, 900, 1.36, 0.06em);
+    }
   }
   &__button {
     display: inline-block;

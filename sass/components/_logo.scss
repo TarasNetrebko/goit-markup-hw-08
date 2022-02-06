@@ -1,13 +1,28 @@
 .logo {
   color: var(--logo-main-color);
   font-family: Raleway, sans-serif;
-  @include font(26px, 700, 1.2, null);
+  @include font(24px, 700, 1.17, null);
+  @include desk {
+    @include font(26px, 700, 1.2, null);
+  }
   &--header {
-    margin-right: 93px;
+    position: absolute;
+    left: 15px;
+    @include tab {
+      position: static;
+      margin-right: 88px;
+    }
+    @include desk {
+      margin-right: 93px;
+    }
   }
   &--footer {
     display: block;
+    text-align: center;
     margin-bottom: 20px;
+    @include desk {
+      text-align: start;
+    }
 
     color: var(--white-color);
   }

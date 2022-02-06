@@ -1,42 +1,90 @@
 .header {
   border-bottom: 1px solid #ececec;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include tab {
+    height: 80px;
+  }
   &__flex {
     display: flex;
     align-items: center;
   }
   &__contacts {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+    display: none;
+    @include tab {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin-left: auto;
+    }
+    @include desk {
+      flex-direction: row;
+      align-items: center;
+    }
     & .link {
       display: flex;
       align-items: center;
-      padding-top: 32px;
-      padding-bottom: 32px;
     }
-    & .header__item + .header__item {
-      margin-left: 30px;
+    @include tab {
+      &__item:nth-child(1) {
+        margin-bottom: 10px;
+      }
+    }
+    @include desk {
+      &__item:nth-child(1) {
+        margin-bottom: 0;
+      }
+      & .header__item + .header__item {
+        margin-left: 30px;
+      }
     }
   }
 }
 .navigation {
   display: flex;
   align-items: center;
+  &__menu-button {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 15px;
+
+    background-color: var(--white-color);
+    border: none;
+    &:hover,
+    &:active {
+      color: var(--accent-color);
+    }
+  }
+  @include tab {
+    &__menu-button {
+      display: none;
+    }
+  }
 }
 .site-nav {
+  display: none;
+  @include tab {
+    display: block;
+  }
   &--flex {
-    display: flex;
+    display: none;
+    @include tab {
+      display: flex;
+    }
   }
   & .link {
     display: flex;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     color: var(--secondary-text-color);
     @include font(14px, 500, 1.14, 0.02em);
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: var(--accent-color);
     }
     &.current {
@@ -46,7 +94,7 @@
         content: '';
         position: absolute;
         left: 0;
-        bottom: -1px;
+        bottom: -33px;
         width: 100%;
         height: 4px;
 
@@ -58,4 +106,12 @@
   & .list__item:not(:last-child) {
     margin-right: 50px;
   }
+}
+.menu-icon {
+  width: 24px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: currentColor;
 }

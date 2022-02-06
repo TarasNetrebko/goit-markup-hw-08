@@ -39,16 +39,29 @@
     &::before {
       content: '';
       display: block;
+      width: 450px;
       height: 120px;
       margin-bottom: 30px;
       border-radius: 4px;
+      background-color: var(--secondary-background-color);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      @include tab {
+        width: 354px;
+      }
+      @include desk {
+        width: 270px;
+      }
     }
   }
   &__title {
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    @include tab {
+      justify-content: flex-start;
+    }
   }
   &__text {
     line-height: 1.7;

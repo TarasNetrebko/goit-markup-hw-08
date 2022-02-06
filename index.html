@@ -15,12 +15,16 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
-<body>
-        <!--
+<body>       
     <header class="header">
         <div class="container header__flex">
             <nav class="navigation">
                 <a href="./index.html" lang="en" class="logo link logo--header"><span class="logo--accent">Web</span>Studio</a>
+                <button type="button" class="navigation__menu-button" data-menu-open>
+                    <svg class="menu-icon">
+                        <use href="images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
                 <ul class="site-nav list site-nav--flex">                
                     <li class="list__item header__item"><a href="./index.html" class="link current">Студия</a></li>
                     <li class="list__item header__item"><a href="./portfolio.html" class="link">Портфолио</a></li>
@@ -28,13 +32,42 @@
                 </ul>
             </nav>
             <ul class="list header__contacts">
-                <li class="list__item header__item"><a href="mailto:info@devstudio.com" class="contacts-header link">
+                <li class="list__item header__item header__contacts__item"><a href="mailto:info@devstudio.com" class="contacts-header link">
                     <svg class="contacts-header__icon1"><use href="images/icons.svg#envelope"></use></svg>info@devstudio.com</a></li>
-                <li class="list__item header__item"><a href="tel:+380961111111" class="contacts-header link">
+                <li class="list__item header__item header__contacts__item"><a href="tel:+380961111111" class="contacts-header link">
                     <svg class="contacts-header__icon2"><use href="images/icons.svg#smartphone"></use></svg>+38 096 111 11 11</a></li>
             </ul>
         </div>
-    </header>            -->
+        <div class="backdrop is-hidden" data-menu>
+            <div class="menu">
+                <nav>
+                    <ul class="list menu__nav-list">
+                        <li class="list__item menu__nav-list-item"><a href="./index.html" class="link menu__nav-link current-mob">Студия</a></li>
+                        <li class="list__item menu__nav-list-item"><a href="./portfolio.html" class="link menu__nav-link">Портфолио</a></li>
+                        <li class="list__item menu__nav-list-item"><a href="" class="link menu__nav-link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="menu__contacts-social">
+                <ul class="list menu__header-contacts">
+                    <li class="list__item menu__header-contacts-item"><a href="tel:+380961111111" class="menu__contacts link">+38
+                            096 111 11 11</a></li>
+                    <li class="list__item menu__header-contacts-item"><a href="mailto:info@devstudio.com"
+                            class="menu__contacts link">info@devstudio.com</a></li>
+                </ul>
+                <ul class="list menu__social">
+                    <li class="list__item menu__social__item"><a href="" aria-label="Instagram">Instagram</a></li>
+                    <li class="list__item menu__social__item"><a href="" aria-label="Twitter">Twitter</a></li>
+                    <li class="list__item menu__social__item"><a href="" aria-label="Facebook">Facebook</a></li>
+                    <li class="list__item menu__social__item"><a href="" aria-label="LinkedIn">LinkedIn</a></li>
+                </ul>
+                </div>
+                <button class="btn-close-menu" aria-label="Закрыть меню" data-menu-close>
+                    <svg class="btn-close-menu__icon">
+                        <use href="images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>                
+            </div>
+    </header>          
     <main>                
         <section class="hero">
             <div class="container hero__container">
@@ -44,7 +77,7 @@
         </section>
         <div class="backdrop is-hidden" data-modal>
             <div class="modal">                
-                <button class="btn-close" aria-label="Закрыть" data-modal-close>
+                <button class="btn-close" aria-label="Закрыть окно заказа" data-modal-close>
                     <svg class="btn-close__icon">
                         <use href="images/icons.svg#icon-close"></use>
                     </svg>
@@ -82,8 +115,8 @@
                     <button type="submit" class="btn-primary modal__submit">Отправить</button>
                 </form>      
             </div>
-        </div>                
-        <!--<section class="section paculiarities">
+        </div>               
+        <section class="section paculiarities">
             <div class="contaier">
                 <h2 class="section__title visually-hidden">Особенности</h2>
                 <ul class="list paculiarities__list">                                
@@ -113,14 +146,14 @@
                     </li>                               
                 </ul>
             </div>
-        </section>               -->
-        <!--<section class="section our-focus">
+        </section>            
+        <section class="section our-focus">
             <div class="container">
                 <h2 class="section__title our-focus__title">Чем мы занимаемся</h2>
                 <ul class="list our-focus__list">
                     <li class="list__item our-focus__item">
                         <div class="focus__thumb">
-                            <img src="./images/notebook.jpg" alt="ноутбук" width="370"> 
+                            <img srcset="./images/notebook.jpg 370w, ./images/notebook-2x.jpg 740w" src="./images/notebook.jpg" alt="ноутбук" sizes="(min-width: 1200px) 30vw"> 
                             <div class="focus__disc-box">
                                 <p class="upper-text focus__disc">десктопные приложения</p>
                             </div>
@@ -128,7 +161,8 @@
                     </li>
                     <li class="list__item our-focus__item">
                         <div class="focus__thumb">
-                            <img src="./images/notebook-smartphone.jpg" alt="ноутбук и смартфон" width="370">
+                            <img srcset="./images/notebook-smartphone.jpg 370w, ./images/notebook-smartphone-2x.jpg 740w" src="./images/notebook-smartphone.jpg" alt="ноутбук и смартфон"
+                                sizes="(min-width: 1200px) 30vw">
                             <div class="focus__disc-box">
                                 <p class="upper-text focus__disc">мобильные приложения</p>
                             </div>
@@ -136,7 +170,8 @@
                     </li>
                     <li class="list__item our-focus__item">
                         <div class="focus__thumb">
-                            <img src="./images/tablet.jpg" alt="планшет" width="370">   
+                            <img srcset="./images/tablet.jpg 370w, ./images/tablet-2x.jpg 740w"
+                                src="./images/tablet.jpg" alt="планшет" sizes="(min-width: 1200px) 30vw">
                             <div class="focus__disc-box">
                                 <p class="upper-text focus__disc">дизайнерские решения</p>
                             </div>
@@ -144,13 +179,13 @@
                     </li>
                 </ul>
             </div>
-        </section>            -->
-        <!--<section class="section team">
+        </section>          
+        <section class="section team">
             <div class="container">
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="list team__list">
                     <li class="list__item team__card">
-                        <img src="./images/photo.jpg" alt="фото Игоря" width="270">
+                        <img srcset="./images/photo.jpg 270w, ./images/photo-2x.jpg 540w, ./images/photo-tab-1x.jpg 354w, ./images/photo-tab-2x.jpg 708w, ./images/photo-mob-1x.jpg 450w, ./images/photo-mob-2x.jpg 900w" src="./images/photo.jpg" alt="фото Игоря" sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw">
                         <div class="team__card-discription">                            
                             <h3 class="list__title teammember">Игорь Демьяненко</h3>
                             <p lang="en" class="profession">Product Designer</p>
@@ -312,8 +347,8 @@
                     </li>
                 </ul>
             </div>
-        </section>-->
-        <!--<section class="section">
+        </section>
+        <section class="section">
             <div class="container customers">
                 <h2 class="section__title customers__title">Постоянные клиенты</h2>
                 <ul class="list customers__list">
@@ -361,11 +396,12 @@
                     </li>
                 </ul>
             </div>
-        </section>-->
+        </section>
     </main>
-            <!--
+           
     <footer class="footer">
         <div class="container footer__container">
+            <div class="adress-social-container">
             <div class="address-container">
             <a href="./index.html" lang="en" class="logo logo--footer link"><span class="logo--accent">Web</span>Studio</a>
             <address>
@@ -412,6 +448,7 @@
                     </li>
                 </ul>
             </div>
+            </div>
             <form class="subscribe" autocomplete="off">
                 <label for="footer__subscribe-input" class="footer__call upper-text footer__subscribe-label">подпишитесь на рассылку</label>
                 <div class="subscribe__actions">
@@ -422,7 +459,8 @@
                 </div>
             </form>
         </div>
-    </footer>-->
+    </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>

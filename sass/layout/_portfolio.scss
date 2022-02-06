@@ -1,7 +1,13 @@
 .project-card-discription {
   position: relative;
   z-index: 2;
-  width: 370px;
+  width: 450px;
+  @include tab {
+    width: 354px;
+  }
+  @include desk {
+    width: 370px;
+  }
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   background-color: #fff;
@@ -14,16 +20,38 @@
     @include font(18px, 700, 2, 0.06em);
   }
   &__flex-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--card-set-gap));
-    margin-left: calc(-1 * var(--card-set-gap));
+    @include tab {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * var(--card-set-gap));
+      margin-left: calc(-1 * var(--card-set-gap));
+    }
   }
   &__list-item {
-    display: flex;
-    flex-basis: calc(100% / 3 - var(--card-set-gap));
-    margin-top: var(--card-set-gap);
-    margin-left: var(--card-set-gap);
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    @include tab {
+      &:not(:last-child) {
+        margin-bottom: 0px;
+      }
+      display: flex;
+      flex-basis: calc(100% / 2 - var(--card-set-gap));
+      margin-top: var(--card-set-gap);
+      margin-left: var(--card-set-gap);
+      &:nth-child(1) .portfolio__title {
+        margin-bottom: 40px;
+      }
+    }
+    @include desk {
+      display: flex;
+      flex-basis: calc(100% / 3 - var(--card-set-gap));
+      margin-top: var(--card-set-gap);
+      margin-left: var(--card-set-gap);
+      &:nth-child(1) .portfolio__title {
+        margin-bottom: 0;
+      }
+    }
   }
   &__thumb {
     position: relative;

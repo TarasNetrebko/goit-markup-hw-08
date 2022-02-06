@@ -1,12 +1,19 @@
 .section {
   padding: 0;
   margin: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desk {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   &__title {
     text-align: center;
 
     color: var(--secondary-text-color);
-    @include font(36px, 700, 1.17, null);
+    @include font(28px, 700, 1.18, null);
+    @include desk {
+      @include font(36px, 700, 1.17, null);
+    }
   }
 }

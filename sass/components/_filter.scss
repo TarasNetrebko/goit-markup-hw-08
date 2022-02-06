@@ -14,10 +14,27 @@
   }
 }
 .flex-filter {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  @include tab {
+    margin-bottom: 30px;
+  }
+  @include desk {
+    margin-bottom: 50px;
+  }
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   &__button:not(:last-child) {
     margin-right: 8px;
+  }
+  &__button:nth-child(n + 4) {
+    margin-top: 15px;
+  }
+  @include tab {
+    flex-wrap: nowrap;
+    justify-content: center;
+    &__button:nth-child(n + 4) {
+      margin-top: 0;
+    }
   }
 }

@@ -1,22 +1,42 @@
 .contacts {
   &-header {
     color: var(--main-text-color);
-    @include font(14px, 500, 1.14, 0.02em);
+    @include tab {
+      @include font(12px, 500, 1.17, 0.02em);
+    }
+    @include desk {
+      @include font(14px, null, 1.14, null);
+    }
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: var(--accent-color);
     }
     &__icon1 {
       transition-duration: 0ms;
-      width: 16px;
-      height: 12px;
-      margin-right: 10px;
+      @include tab {
+        width: 14px;
+        height: 10px;
+        margin-right: 8px;
+      }
+      @include desk {
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+      }
     }
     &__icon2 {
       transition-duration: 0ms;
-      width: 10px;
-      height: 16px;
-      margin-right: 10px;
+      @include tab {
+        width: 10px;
+        height: 14px;
+        margin-right: 8px;
+      }
+      @include desk {
+        width: 10px;
+        height: 16px;
+        margin-right: 10px;
+      }
     }
   }
   &-footer {
