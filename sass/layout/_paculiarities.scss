@@ -1,11 +1,9 @@
 .paculiarities {
   padding-bottom: 0;
   &__list {
-    @include mob {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-    }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     @include tab {
       flex-wrap: wrap;
       align-items: flex-start;
@@ -18,6 +16,7 @@
     }
   }
   &__item {
+    width: 90vw;
     @include mob {
       width: 450px;
       margin-bottom: 30px;
@@ -39,7 +38,7 @@
     &::before {
       content: '';
       display: block;
-      width: 450px;
+      width: 90vw;
       height: 120px;
       margin-bottom: 30px;
       border-radius: 4px;
@@ -47,6 +46,9 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      @include mob {
+        width: 450px;
+      }
       @include tab {
         width: 354px;
       }

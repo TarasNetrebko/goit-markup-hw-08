@@ -4,11 +4,19 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  &__item:nth-child(2n - 1) {
-    margin-right: 30px;
+  &__item:nth-child(5) {
+    margin-bottom: 30px;
   }
   &__item:not(:nth-child(n + 5)) {
     margin-bottom: 30px;
+  }
+  @include mob {
+    &__item:nth-child(5) {
+      margin-bottom: 0;
+    }
+    &__item:nth-child(2n - 1) {
+      margin-right: 30px;
+    }
   }
   @include tab {
     &__item:nth-child(2n - 1) {

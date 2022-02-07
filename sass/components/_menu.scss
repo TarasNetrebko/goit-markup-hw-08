@@ -3,10 +3,14 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%) scale(1);
-  width: 480px;
+  width: 100vw;
   height: 100vh;
+  padding: 3% 3%;
+  @include mob {
+    width: 480px;
+    padding: 48px 40px;
+  }
   //height: 796px;
-  padding: 48px 40px;
 
   background-color: var(--white-color);
   &__nav-list {
@@ -49,11 +53,17 @@
         color: var(--accent-color);
       }
       &:not(:last-child) {
-        padding-right: 10px;
         border-right: 1px solid rgba(33, 33, 33, 0.2);
+        padding-right: 1px;
+        @include mob {
+          padding-right: 10px;
+        }
       }
       &:not(:first-child) {
-        margin-left: 10px;
+        margin-left: 1px;
+        @include mob {
+          margin-left: 10px;
+        }
       }
     }
   }
@@ -67,10 +77,14 @@
 }
 .btn-close-menu {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 5px;
+  right: 7px;
   width: 40px;
   height: 40px;
+  @include mob {
+    top: 10px;
+    right: 15px;
+  }
 
   border: none;
   background-color: var(--white-color);

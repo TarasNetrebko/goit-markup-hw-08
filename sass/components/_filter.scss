@@ -15,26 +15,44 @@
 }
 .flex-filter {
   margin-bottom: 40px;
-  @include tab {
-    margin-bottom: 30px;
-  }
-  @include desk {
-    margin-bottom: 50px;
-  }
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  &__button:not(:last-child) {
+  &__button:nth-child(1) {
     margin-right: 8px;
   }
-  &__button:nth-child(n + 4) {
-    margin-top: 15px;
+  &__button:nth-child(3) {
+    margin-right: 8px;
+  }
+  &__button:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  @include mob {
+    &__button:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &__button:nth-child(1) {
+      margin-right: 0;
+    }
+    &__button:nth-child(3) {
+      margin-right: 0;
+    }
+    &__button:not(:last-child) {
+      margin-right: 8px;
+    }
+    &__button:nth-child(n + 4) {
+      margin-top: 15px;
+    }
   }
   @include tab {
+    margin-bottom: 30px;
     flex-wrap: nowrap;
     justify-content: center;
     &__button:nth-child(n + 4) {
       margin-top: 0;
     }
+  }
+  @include desk {
+    margin-bottom: 50px;
   }
 }
