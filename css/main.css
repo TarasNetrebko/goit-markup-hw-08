@@ -732,7 +732,7 @@ textarea:focus {
 
 @media screen and (min-width: 480px) {
   .menu {
-    width: 480px;
+    width: 100%;
     padding: 48px 40px;
   }
 }
