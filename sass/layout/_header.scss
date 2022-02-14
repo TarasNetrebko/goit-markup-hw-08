@@ -3,9 +3,15 @@
   height: 60px;
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
+  background-color: var(--white-color);
+  z-index: 3;
+  margin-top: -60px;
   @include tab {
     height: 80px;
+  }
+  @include desk {
+    position: relative;
   }
   &__flex {
     display: flex;

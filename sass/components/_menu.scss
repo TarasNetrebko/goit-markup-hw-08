@@ -6,6 +6,7 @@
   width: 100vw;
   height: 100vh;
   padding: 3% 3%;
+  z-index: 4;
   @include mob {
     width: 100%;
     padding: 48px 40px;

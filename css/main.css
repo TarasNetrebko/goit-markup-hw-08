@@ -50,6 +50,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+main {
+  margin-top: 60px;
+}
+
 * {
   -webkit-transition-property: background-color, color, opacity, visibility, border, -webkit-transform, -webkit-box-shadow;
   transition-property: background-color, color, opacity, visibility, border, -webkit-transform, -webkit-box-shadow;
@@ -727,6 +731,7 @@ textarea:focus {
   width: 100vw;
   height: 100vh;
   padding: 3% 3%;
+  z-index: 4;
   background-color: var(--white-color);
 }
 
@@ -883,12 +888,21 @@ textarea:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: fixed;
+  background-color: var(--white-color);
+  z-index: 3;
+  margin-top: -60px;
 }
 
 @media screen and (min-width: 768px) {
   .header {
     height: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    position: relative;
   }
 }
 

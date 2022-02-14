@@ -4,6 +4,9 @@ body {
   font-family: Roboto, sans-serif;
   @include font(14px, null, null, 0.03em);
 }
+main {
+  margin-top: 60px;
+}
 * {
   transition-property: background-color, transform, box-shadow, color, opacity, visibility, border;
   transition-duration: 250ms;
