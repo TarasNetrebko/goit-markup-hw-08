@@ -1,17 +1,19 @@
 .header {
+  width: 100%;
   border-bottom: 1px solid #ececec;
   height: 60px;
   display: flex;
   align-items: center;
   position: fixed;
-  background-color: var(--white-color);
-  z-index: 3;
   margin-top: -60px;
+  background-color: var(--white-color);
   @include tab {
     height: 80px;
+    margin-top: -80px;
   }
   @include desk {
     position: relative;
+    margin-top: 0;
   }
   &__flex {
     display: flex;

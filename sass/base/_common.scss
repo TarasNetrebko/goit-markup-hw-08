@@ -6,6 +6,12 @@ body {
 }
 main {
   margin-top: 60px;
+  @include tab {
+    margin-top: 80px;
+  }
+  @include desk {
+      margin-top: 0;
+    }
 }
 * {
   transition-property: background-color, transform, box-shadow, color, opacity, visibility, border;

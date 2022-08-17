@@ -54,6 +54,18 @@ main {
   margin-top: 60px;
 }
 
+@media screen and (min-width: 768px) {
+  main {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    margin-top: 0;
+  }
+}
+
 * {
   -webkit-transition-property: background-color, color, opacity, visibility, border, -webkit-transform, -webkit-box-shadow;
   transition-property: background-color, color, opacity, visibility, border, -webkit-transform, -webkit-box-shadow;
@@ -152,7 +164,7 @@ textarea:focus {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -880,6 +892,7 @@ textarea:focus {
 }
 
 .header {
+  width: 100%;
   border-bottom: 1px solid #ececec;
   height: 60px;
   display: -webkit-box;
@@ -889,20 +902,21 @@ textarea:focus {
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  background-color: var(--white-color);
-  z-index: 3;
   margin-top: -60px;
+  background-color: var(--white-color);
 }
 
 @media screen and (min-width: 768px) {
   .header {
     height: 80px;
+    margin-top: -80px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .header {
     position: relative;
+    margin-top: 0;
   }
 }
 
